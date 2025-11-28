@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodgeball Dash - College Fest Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="game-container">
+        <canvas id="gameCanvas"></canvas>
+
+        <div id="gameOverScreen" class="overlay hidden">
+            <h2 id="finalScore">Game Over!</h2>
+            <p id="scoreDisplay"></p>
+            <p class="instruction-text">Submit your score for the leaderboard!</p>
+
+            <form id="submissionForm" action="#" method="POST">
+                <input type="text" id="nameInput" name="Name" placeholder="Your Name" required>
+                <input type="email" id="emailInput" name="Email" placeholder="Your Email" required>
+                <input type="text" id="collegeInput" name="College" placeholder="Your College" required>
+                <input type="hidden" id="timeScoreInput" name="TimeScore">
+                <button type="submit" id="submitScoreBtn">Submit Score</button>
+                <div id="submissionMessage" class="message hidden"></div>
+            </form>
+
+            <button id="restartButton">Play Again</button>
+        </div>
+
+        <div id="startScreen" class="overlay">
+            <h2>Dodgeball Dash</h2>
+            <p>Use **Mouse/Touch** to move.</p>
+            <p>Dodge the homing enemy balls for the longest time!</p>
+            <button id="startButton">Start Game</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
